@@ -8,6 +8,6 @@ public class AppController {
 
   @GetMapping("/")
   public String home() {
-    return "CICD with Docker and GitHub Actions";
+    return "CICD with Docker and GitHub Actions - Autohive";
   }
 }
