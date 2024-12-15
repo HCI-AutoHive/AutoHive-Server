@@ -5,6 +5,7 @@ import com.hci.autohive.domain.Detail;
 import com.hci.autohive.repository.CarRepository;
 import com.hci.autohive.repository.DetailRepository;
 import java.io.IOException;
+import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -14,15 +15,11 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
+@RequiredArgsConstructor
 public class ExcelService {
 
   private final CarRepository carRepository;
   private final DetailRepository detailRepository;
-
-  public ExcelService(CarRepository carRepository, DetailRepository detailRepository) {
-    this.carRepository = carRepository;
-    this.detailRepository = detailRepository;
-  }
 
   @Transactional
   public void saveExcelData(MultipartFile file) throws IOException {
