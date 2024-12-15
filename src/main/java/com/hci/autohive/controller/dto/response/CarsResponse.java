@@ -15,7 +15,7 @@ public record CarsResponse(
     @Schema(description = "자동차 이미지 URL", example = "https://dzqerse1lankl.cloudfront.net/carsdata/cars/cm_cardb/file/7166e6bd-affc-403f-804d-205b608c872c.png")
     String imageUrl,
 
-    @Schema(description = "자동차 별점", example = "4")
+    @Schema(description = "자동차 별점 (1.0 ~ 5.0)", example = "4")
     Float starRating
 ) {
 }
