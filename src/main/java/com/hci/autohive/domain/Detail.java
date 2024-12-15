@@ -8,10 +8,12 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Lob;
 import jakarta.persistence.MapsId;
 import jakarta.persistence.OneToOne;
+import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Setter
+@Getter
 public class Detail {
 
   @Id
